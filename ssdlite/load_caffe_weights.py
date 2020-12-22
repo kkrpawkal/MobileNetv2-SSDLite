@@ -21,7 +21,7 @@ def load_weights(path, shape=None):
 def load_data(net):
     for key in net.params.iterkeys():
         if type(net.params[key]) is caffe._caffe.BlobVec:
-            print key
+            print(key)
             if 'mbox' not in key and (key.startswith("conv") or key.startswith("Conv") or key.startswith("layer")):
                 print('conv')
                 if key.endswith("/bn"):
